@@ -1,0 +1,32 @@
+.restaurantImages {
+  height: 250px;
+}
+
+#resturants{
+  visibility: hidden;
+}
+
+#map {
+  width: 45%;
+  height: 200px;
+  background-color: grey;
+
+}
+
+#mapOne {
+  width: 45%;
+  height: 200px;
+  background-color: grey;
+}
+
+#mapTwo {
+  width: 45%;
+  height: 200px;
+  background-color: grey;
+}
+
+#mapThree {
+  width: 45%;
+  height: 200px;
+  background-color: grey;
+}

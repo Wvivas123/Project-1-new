@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Assistant|Prompt" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js "></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <title>WaitQ</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper"> <a href="#" class="brand-logo">WaitQ</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a id="Host" href="hostessinput.html">Hostess App</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s4">
+        <div class="card medium">
+          <img src="images/miami_experience.png" class="image" style="width: 100%; height: 100%;">
+          <div class="middle">
+            <button id="miami" data-target="modal1" class="btn modal-trigger" onclick="displayMap()">Miami</button>
+          </div>
+          <div id="miami" class="card image"> </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="card medium">
+          <img src="images/NY.png" class="image" style="width: 100%; height: 100%;">
+          <div class="middle">
+            <button id="NYC" data-target="modal1" class="btn modal-trigger" onclick="displayMap()">New York</button>
+          </div>
+          <div class="card image"> </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="card medium">
+          <img src="images/SanFran.jpg" class="image" style="width: 100%; height: 100%;">
+          <div class="middle">
+            <button id="SF" data-target="modal1" class="btn modal-trigger" onclick="displayMap()">San Francisco</button>
+          </div>
+          <div class="card image"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s4">
+        <div class="card medium">
+          <img src="images/LA.png" class="image" style="width: 100%; height: 100%;">
+          <div class="middle">
+            <button id="LA" data-target="modal1" class="btn modal-trigger" onclick="displayMap()">Los Angeles</button>
+          </div>
+          <div class="card image"> </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="card medium">
+          <img src="images/chitown.jpg" class="image" style="width: 100%; height: 100%;">
+          <div class="middle">
+            <button id="Chicago" data-target="modal1" class="btn modal-trigger" onclick="displayMap()">Chicago</button>
+          </div>
+          <div class="card image"> </div>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="card medium">
+          <img src="images/Nola.png" class="image" style="width: 100%; height: 100%;">
+          <div class="middle">
+            <button id="NOLA" data-target="modal1" class="btn modal-trigger" onclick="displayMap()">New Orleans</button>
+          </div>
+          <div class="card image"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+
+
+      <div id="resturants">
+
+        <div class="card blue lighten-2" class="resturantOne">
+
+          <div class="card-content white-text">
+
+
+            <div id="infoResponse0-0">
+
+            </div>
+
+            <div id="infoResponse0-1">
+
+            </div>
+
+            <div id="infoResponse0-2">
+
+            </div>
+
+            <div class="containerOne" id="infoResponse0-3"></div>
+
+          
+
+          <div id="map"></div>
+        </div>
+      </div>
+
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="card blue lighten-2" class="resturantTwo">
+        <div class="card-content white-text">
+
+          <div id="infoResponse1-0">
+
+          </div>
+
+          <div id="infoResponse1-1">
+
+          </div>
+          <div id="infoResponse1-2">
+
+          </div>
+
+          <div id="infoResponse1-3">
+
+          </div>
+
+          <div id="mapOne">
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+
+
+      <div class="card blue lighten-2" class="resturantThree">
+        <div class="card-content white-text">
+          <div id="infoResponse2-0">
+
+          </div>
+
+          <div id="infoResponse2-1">
+
+          </div>
+          <div id="infoResponse2-2">
+
+          </div>
+
+          <div id="infoResponse2-3">
+
+          </div>
+
+          <div id="mapTwo">
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+
+
+      <div class="card blue lighten-2" class="resturantFour">
+        <div class="card-content white-text">
+          <div id="infoResponse3-0">
+
+          </div>
+
+          <div id="infoResponse3-1">
+
+          </div>
+          <div id="infoResponse3-2">
+
+          </div>
+
+          <div id="infoResponse3-3">
+
+          </div>
+
+          <div id="mapThree">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!--  <div id="resturants">
+
+    <div class="resturantOne">
+
+
+
+
+      <div id="infoResponse0-0">
+
+      </div>
+
+      <div id="infoResponse0-1">
+
+      </div>
+
+      <div id="infoResponse0-2">
+
+      </div>
+      <div id="infoResponse0-3">
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="resturantTwo">
+
+
+      <div id="map"></div>
+    </div>
+
+    <div id="infoResponse1-0">
+
+    </div>
+
+    <div id="infoResponse1-1">
+
+    </div>
+    <div id="infoResponse1-2">
+
+    </div>
+
+    <div id="infoResponse1-3">
+
+    </div>
+
+    <div id="mapOne">
+
+    </div>
+
+
+
+
+    <div class="resturantTwo">
+
+      <div id="infoResponse2-0">
+
+      </div>
+
+      <div id="infoResponse2-1">
+
+      </div>
+      <div id="infoResponse2-2">
+
+      </div>
+
+      <div id="infoResponse2-3">
+
+      </div>
+
+      <div id="mapTwo">
+
+      </div>
+    </div>
+
+
+    <div class="resturantThree">
+
+      <div id="infoResponse3-0">
+
+      </div>
+
+      <div id="infoResponse3-1">
+
+      </div>
+      <div id="infoResponse3-2">
+
+      </div>
+
+      <div id="infoResponse3-3">
+
+      </div>
+
+      <div id="mapThree">
+
+      </div>
+    </div>
+
+  </div>
+
+    <!--  <button id="miami" type="button" name="button" onclick="displayMap()">Miami</button>
+
+  <button id="NYC" type="button" name="button" onclick="displayMap()">NYC</button>
+
+    <button id="SF" type="button" name="button" onclick="displayMap()">SF</button>
+
+    <button id="LA" type="button" name="button" onclick="displayMap()">LA</button>
+
+    <button id="Chicago" type="button" name="button" onclick="displayMap()">Chicago</button>
+
+    <button id="NOLA" type="button" name="button" onclick="displayMap()">NOLA</button>-->
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js">
+
+  </script>
+
+  <script src="assets/script.js">
+
+  </script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuqoXwqzEfTxLrb-16ia1sOfc79vH1uE0&callback=initMap">
+  </script>
+
+
+
+</body>
+
+</html>
